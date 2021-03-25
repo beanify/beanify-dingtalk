@@ -1,0 +1,1 @@
+# beanify-dingtalk
