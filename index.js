@@ -84,6 +84,5 @@ module.exports = async function (beanify, opts) {
     }
   })
 
-  console.log(dingTalk)
   beanify.decorate('$dingTalk', dingTalk)
 }
