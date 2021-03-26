@@ -75,9 +75,14 @@ DingTalk.prototype.get = function (url) {
 }
 
 module.exports = async function (beanify, opts) {
+  opts.importApis = opts.importApis || []
+  opts.maxAge = opts.maxAge || 7200
+
   const dingTalk = new DingTalk(opts)
 
-  apis.forEach(api => {
+  const exportApis = [...apis, ...opts.importApis]
+
+  exportApis.forEach(api => {
     const { url, method = 'GET' } = api
     dingTalk[camelCase(url)] = function (...args) {
       return dingTalk[method.toLowerCase()](api.url, ...args)
@@ -85,4 +90,5 @@ module.exports = async function (beanify, opts) {
   })
 
   beanify.decorate('$dingTalk', dingTalk)
+  console.log(dingTalk)
 }

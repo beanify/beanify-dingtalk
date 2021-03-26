@@ -1,9 +1,15 @@
 import { Beanify, PluginDoneCallback, PluginOptions } from 'beanify'
 
+export interface API {
+  url: string
+  method: string
+}
+
 export class DingTalkOptions extends PluginOptions {
   appKey: string
   appSecret: string
   maxAge?: number
+  importApis?: Array<API>
 }
 
 export interface DingTalk {

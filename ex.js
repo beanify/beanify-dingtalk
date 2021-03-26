@@ -1,4 +1,6 @@
 const Beanify = require('beanify')
+const beanifyEnv = require('beanify-env')
+
 const beanifyDingTalk = require('./index')
 
 const beanify = Beanify({
@@ -8,14 +10,29 @@ const beanify = Beanify({
   }
 })
 
-const appKey = 'dinge645rnkiswwo1sod'
-const appSecret =
-  'R4PTN76oXCKJMPI8KBoXMg0cB7MINx83Gj6qbsT3uE-eIKzNj-0NtoaLFihk_orG'
-
-beanify.register(beanifyDingTalk, {
-  appKey,
-  appSecret
-})
+beanify
+  .register(beanifyEnv, {
+    dotenv: true,
+    schema: {
+      type: 'object',
+      properties: {
+        DINGTALK_APPKEY: {
+          type: 'string'
+        },
+        DINGTALK_APPSECRET: {
+          type: 'string'
+        }
+      },
+      required: ['DINGTALK_APPKEY', 'DINGTALK_APPSECRET']
+    }
+  })
+  .after(() => {
+    const { $env } = beanify
+    beanify.register(beanifyDingTalk, {
+      appKey: $env.DINGTALK_APPKEY,
+      appSecret: $env.DINGTALK_APPSECRET
+    })
+  })
 
 beanify.ready(e => {
   e && beanify.$log.error(e)

@@ -1,6 +1,6 @@
 {
   "name": "beanify-dingtalk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
@@ -19,6 +19,7 @@
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
     "beanify": "^3.0.17",
+    "beanify-env": "^3.0.3",
     "eslint": "^7.15.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
