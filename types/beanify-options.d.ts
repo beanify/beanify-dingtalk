@@ -5,19 +5,20 @@ export interface API {
   method: string
 }
 
-export class DingTalkOptions extends PluginOptions {
+export class BeanifyDingTalkOptions extends PluginOptions {
   appKey: string
   appSecret: string
+  token?: string
+  aesKey?: string
+  corpId?: string
   maxAge?: number
   importApis?: Array<API>
 }
 
-export interface DingTalk {
-  gettoken(): Promise<string>
-}
-
 export type BeanifyDingTalk = {
-  (beanify: Beanify, opts: DingTalkOptions, done: PluginDoneCallback): Promise<
-    void
-  >
+  (
+    beanify: Beanify,
+    opts: BeanifyDingTalkOptions,
+    done: PluginDoneCallback
+  ): Promise<void>
 }

@@ -1,6 +1,8 @@
 const LruCache = require('lru-cache')
 const { default: axios } = require('axios')
 const { camelCase } = require('camel-case')
+const { EventEmitter } = require('events')
+const { inherits } = require('util')
 
 const cache = new LruCache({ maxAge: 7200 })
 const baseURL = 'https://oapi.dingtalk.com'
@@ -15,6 +17,8 @@ const apis = [
 function DingTalk (opts) {
   this.$options = opts
 }
+
+inherits(DingTalk, EventEmitter)
 
 DingTalk.prototype.gettoken = function () {
   return new Promise((resolve, reject) => {
@@ -39,13 +43,14 @@ DingTalk.prototype.gettoken = function () {
   })
 }
 
-DingTalk.prototype.post = function (url, data) {
+DingTalk.prototype.post = function (url, data, params) {
   return new Promise((resolve, reject) => {
     this.gettoken()
       .then(async token => {
         const result = axios.post(url, data, {
           baseURL,
           params: {
+            ...params,
             access_token: token
           }
         })
@@ -56,13 +61,14 @@ DingTalk.prototype.post = function (url, data) {
   })
 }
 
-DingTalk.prototype.get = function (url) {
+DingTalk.prototype.get = function (url, params) {
   return new Promise((resolve, reject) => {
     this.gettoken()
       .then(async token => {
         const result = await axios.get(url, {
           baseURL,
           params: {
+            ...params,
             access_token: token
           }
         })
@@ -73,6 +79,10 @@ DingTalk.prototype.get = function (url) {
       .catch(reject)
   })
 }
+
+DingTalk.prototype.encrypt = function () {}
+
+DingTalk.prototype.decrypt = function () {}
 
 module.exports = async function (beanify, opts) {
   opts.importApis = opts.importApis || []
@@ -90,5 +100,4 @@ module.exports = async function (beanify, opts) {
   })
 
   beanify.decorate('$dingTalk', dingTalk)
-  console.log(dingTalk)
 }
