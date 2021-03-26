@@ -1,0 +1,114 @@
+[
+  {
+    "url": "/auth/scopes",
+    "method": "GET"
+  },
+  {
+    "url": "/topapi/v2/user/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/user/listsimple",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/user/listid",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/v2/user/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/user/count",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/inactive/user/v2/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/user/listadmin",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/user/get_admin_scope",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/v2/user/getbymobile",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/user/getbyunionid",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/v2/department/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/v2/department/listsubid",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/v2/department/listparentbyuser",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/v2/department/listparentbydept",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/v2/department/listsub",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/role/getrolegroup",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/role/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/role/getrole",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/role/simplelist",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/extcontact/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/extcontact/listlabelgroups",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/extcontact/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/industry/department/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/industry/user/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/industry/department/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/industry/user/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/industry/organization/get",
+    "method": "POST"
+  }
+]

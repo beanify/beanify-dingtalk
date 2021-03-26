@@ -5,12 +5,7 @@ const { camelCase } = require('camel-case')
 const cache = new LruCache({ maxAge: 7200 })
 const baseURL = 'https://oapi.dingtalk.com'
 
-const apis = [
-  {
-    url: '/auth/scopes',
-    method: 'GET'
-  }
-]
+const apis = require('./apis')
 
 function DingTalk (opts) {
   this.$options = opts

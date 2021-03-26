@@ -1,10 +1,17 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es2015"],
+    "lib": [
+      "es2015"
+    ],
     "module": "commonjs",
     "noEmit": true,
     "strict": true
   },
-  "include": ["/types/*.d.ts"]
+  "include": [
+    "./*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -36,5 +36,10 @@ beanify
 
 beanify.ready(e => {
   e && beanify.$log.error(e)
+  beanify.$dingTalk.topapiIndustryOrganizationGet().then(data => {
+    console.log({
+      data
+    })
+  })
   beanify.print()
 })

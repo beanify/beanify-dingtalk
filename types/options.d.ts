@@ -1,4 +1,5 @@
 import { Beanify, PluginDoneCallback, PluginOptions } from 'beanify'
+import addressBook from './addressBook'
 
 export interface API {
   url: string
@@ -12,7 +13,7 @@ export class DingTalkOptions extends PluginOptions {
   importApis?: Array<API>
 }
 
-export interface DingTalk {
+export interface DingTalk extends addressBook {
   gettoken(): Promise<string>
 }
 
