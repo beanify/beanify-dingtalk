@@ -1,0 +1,14 @@
+[
+  {
+    "url": "/topapi/collection/form/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/collection/instance/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/collection/instance/get",
+    "method": "POST"
+  }
+]

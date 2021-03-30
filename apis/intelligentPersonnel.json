@@ -1,0 +1,42 @@
+[
+  {
+    "url": "/topapi/smartwork/hrm/employee/queryonjobt",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/employee/querypreentry",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/employee/listdimission",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/employee/querydimission",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/employee/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/employee/field/grouplist",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/employee/v2/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/roster/meta/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/organization/dept/meta/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/smartwork/hrm/organization/dept/get",
+    "method": "POST"
+  }
+]

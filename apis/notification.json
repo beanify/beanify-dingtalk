@@ -1,0 +1,22 @@
+[
+  {
+    "url": "/topapi/message/corpconversation/getsendprogress",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/message/corpconversation/getsendresult",
+    "method": "POST"
+  },
+  {
+    "url": "/chat/getReadList",
+    "method": "GET"
+  },
+  {
+    "url": "/chat/get",
+    "method": "GET"
+  },
+  {
+    "url": "/topapi/chat/qrcode/get",
+    "method": "GET"
+  }
+]

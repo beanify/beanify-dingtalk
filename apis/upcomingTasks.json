@@ -1,0 +1,6 @@
+[
+  {
+    "url": "/topapi/workrecord/getbyuserid",
+    "method": "POST"
+  }
+]

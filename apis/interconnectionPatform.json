@@ -1,0 +1,18 @@
+[
+  {
+    "url": "/topapi/union/cooperate/info/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/union/cooperate/joined/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/org/union/trunk/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/org/union/branch/get",
+    "method": "POST"
+  }
+]

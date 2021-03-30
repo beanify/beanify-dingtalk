@@ -160,30 +160,24 @@ type OpenIndustryEmp = {
 }
 
 export default interface addressBook {
-  authScopes(query: {
-    access_token: string
-  }): Promise<{
+  authScopes(): Promise<{
     auth_org_scopes: AuthOrgScopes,
     auth_user_field: string
   } & ErrorMessage>
-  topapiV2UserGet(query: {
-    access_token: string
-  }, body: {
+  topapiV2UserGet(body: {
     userid: string,
-    language: 'zh_CN' | 'en_US'
+    language?: 'zh_CN' | 'en_US'
   }): Promise<{
     request_id: string,
     result: UserGetResponse
   } & ErrorMessage>
-  topapiUserListsimple(query: {
-    access_token: string
-  }, body: {
+  topapiUserListsimple(body: {
     dept_id: number
     cursor: number
     size: number
-    order_field: string
-    contain_access_limit: boolean
-    language: 'zh_CN' | 'en_US'
+    order_field?: string
+    contain_access_limit?: boolean
+    language?: 'zh_CN' | 'en_US'
   }): Promise<{
     request_id: string
     result: {
@@ -192,23 +186,19 @@ export default interface addressBook {
       list: ListUserSimpleResponse
     }
   } & ErrorMessage>
-  topapiUserListid(query: {
-    access_token: string
-  }, body: {
+  topapiUserListid(body: {
     dept_id: string
   }): Promise<{
     request_id: string
     result: ListUserByDeptResponse
   } & ErrorMessage>
-  topapiV2UserList(query: {
-    access_token: string
-  }, body: {
+  topapiV2UserList(body: {
     dept_id: number
     cursor: number
     size: number
-    order_field: string
-    contain_access_limit: boolean
-    language: 'zh_CN' | 'en_US'
+    order_field?: string
+    contain_access_limit?: boolean
+    language?: 'zh_CN' | 'en_US'
   }): Promise<{
     result: {
       has_more: boolean
@@ -216,21 +206,17 @@ export default interface addressBook {
       list: Array<ListUserResponse>
     }
   } & ErrorMessage>
-  topapiUserCount(query: {
-    access_token: string
-  }, body: {
+  topapiUserCount(body: {
     only_active: boolean
   }): Promise<{
+    request_id: string
     result: {
       count: number
-      request_id: string
     }
   } & ErrorMessage>
-  topapiInactiveUserV2Get(query: {
-    access_token: string
-  }, body: {
+  topapiInactiveUserV2Get(body: {
     is_active: boolean
-    dept_ids: Array<number>
+    dept_ids?: Array<number>
     offset: number
     size: number
     query_date: string
@@ -242,23 +228,17 @@ export default interface addressBook {
       has_more: boolean
     }
   } & ErrorMessage>
-  topapiUserListadmin(query: {
-    access_token: string
-  }): Promise<{
+  topapiUserListadmin(): Promise<{
     request_id: string
     result: Array<ListAdminResponse>
-  }>
-  topapiUserGetAdminScope(query: {
-    access_token: string
-  }, body: {
+  } & ErrorMessage>
+  topapiUserGetAdminScope(body: {
     userid: string
   }): Promise<{
     request_id: string
     dept_ids: Array<number>
   } & ErrorMessage>
-  topapiV2UserGetbymobile(query: {
-    access_token: string
-  }, body: {
+  topapiV2UserGetbymobile(body: {
     mobile: string
   }): Promise<{
     request_id: string
@@ -266,9 +246,7 @@ export default interface addressBook {
       userid: string
     }
   } & ErrorMessage>
-  topapiUserGetbyunionid(query: {
-    access_token: string
-  }, body: {
+  topapiUserGetbyunionid(body: {
     unionid: string
   }): Promise<{
     request_id: string
@@ -276,18 +254,14 @@ export default interface addressBook {
       contact_type: number
     }
   } & ErrorMessage>
-  topapiV2DepartmentGet(query: {
-    access_token: string
-  }, body: {
+  topapiV2DepartmentGet(body: {
     dept_id: number
-    language: 'zh_CN' | 'en_US'
+    language?: 'zh_CN' | 'en_US'
   }): Promise<{
     request_id: string
     result: DeptGetResponse
   } & ErrorMessage>
-  topapiV2DepartmentListsubid(query: {
-    access_token: string
-  }, body: {
+  topapiV2DepartmentListsubid(body: {
     dept_id: number
   }): Promise<{
     request_id: string
@@ -295,9 +269,7 @@ export default interface addressBook {
       dept_id_list: Array<number>
     }
   } & ErrorMessage>
-  topapiV2DepartmentListparentbyuser(query: {
-    access_token: string
-  }, body: {
+  topapiV2DepartmentListparentbyuser(body: {
     userid: string
   }): Promise<{
     request_id: string
@@ -307,9 +279,7 @@ export default interface addressBook {
       }>
     }
   } & ErrorMessage>
-  topapiV2DepartmentListparentbydept(query: {
-    access_token: string
-  }, body: {
+  topapiV2DepartmentListparentbydept(body: {
     dept_id: number
   }): Promise<{
     request_id: string
@@ -317,18 +287,14 @@ export default interface addressBook {
       parent_id_list: Array<number>
     }
   } & ErrorMessage>
-  topapiV2DepartmentListsub(query: {
-    access_token: string
-  }, body: {
-    dept_id: number
-    language: 'zh_CN' | 'en_US'
+  topapiV2DepartmentListsub(body: {
+    dept_id?: number
+    language?: 'zh_CN' | 'en_US'
   }): Promise<{
     request_id: string
     result: Array<DeptBaseResponse>
   } & ErrorMessage>
-  topapiRoleGetrolegroup(query: {
-    access_token: string
-  }, body: {
+  topapiRoleGetrolegroup(body: {
     group_id: number
   }): Promise<{
     role_group: {
@@ -340,11 +306,9 @@ export default interface addressBook {
       group_name: string
     }
   } & ErrorMessage>
-  topapiRoleList(query: {
-    access_token: string
-  }, body: {
-    size: number
-    offset: number
+  topapiRoleList(body: {
+    size?: number
+    offset?: number
   }): Promise<{
     request_id: string
     result: {
@@ -359,9 +323,7 @@ export default interface addressBook {
       }>
     }
   } & ErrorMessage>
-  topapiRoleGetrole(query: {
-    access_token: string
-  }, body: {
+  topapiRoleGetrole(body: {
     roleId: number
   }): Promise<{
     request_id: string
@@ -370,12 +332,10 @@ export default interface addressBook {
       groupId: number
     }
   } & ErrorMessage>
-  topapiRoleSimplelist(query: {
-    access_token: string
-  }, body: {
+  topapiRoleSimplelist(body: {
     role_id: number
-    size: number
-    offset: number
+    size?: number
+    offset?: number
   }): Promise<{
     request_id: string
     result: {
@@ -391,20 +351,16 @@ export default interface addressBook {
       }>
     }
   } & ErrorMessage>
-  topapiExtcontactList(query: {
-    access_token: string
-  }, body: {
-    size: number
-    offset: number
+  topapiExtcontactList(body: {
+    size?: number
+    offset?: number
   }): Promise<{
     request_id: string
     result: Array<OpenExtContact>
   } & ErrorMessage>
-  topapiExtcontactListlabelgroups(query: {
-    access_token: string
-  }, body: {
-    size: number
-    offset: number
+  topapiExtcontactListlabelgroups(body: {
+    size?: number
+    offset?: number
   }): Promise<{
     request_id: string
     result: {
@@ -416,17 +372,13 @@ export default interface addressBook {
       }>
     }
   } & ErrorMessage>
-  topapiExtcontactGet(query: {
-    access_token: string
-  }, body: {
+  topapiExtcontactGet(body: {
     user_id: string
   }): Promise<{
     request_id: string
     result: OpenExtContact
   } & ErrorMessage>
-  topapiIndustryDepartmentGet(query: {
-    access_token: string
-  }, body: {
+  topapiIndustryDepartmentGet(body: {
     dept_id: number
   }): Promise<{
     request_id: string
@@ -439,12 +391,10 @@ export default interface addressBook {
       name: string
     }
   } & ErrorMessage>
-  topapiIndustryUserList(query: {
-    access_token: string
-  }, body: {
+  topapiIndustryUserList(body: {
     dept_id: number
-    role: string
-    cursor: number
+    role?: string
+    cursor?: number
     size: number
   }): Promise<{
     request_id: string
@@ -455,11 +405,9 @@ export default interface addressBook {
       details: Array<OpenIndustryEmp>
     }
   } & ErrorMessage>
-  topapiIndustryDepartmentList(query: {
-    access_token: string
-  }, body: {
+  topapiIndustryDepartmentList(body: {
     dept_id: number
-    cursor: number
+    cursor?: number
     size: number
   }): Promise<{
     request_id: string
@@ -476,9 +424,7 @@ export default interface addressBook {
       has_more: boolean
     }
   } & ErrorMessage>
-  topapiIndustryUserGet(query: {
-    access_token: string
-  }, body: {
+  topapiIndustryUserGet(body: {
     dept_id: number
     userid: string
   }): Promise<{
@@ -494,9 +440,7 @@ export default interface addressBook {
       unionid: string
     }
   } & ErrorMessage>
-  topapiIndustryOrganizationGet(query: {
-    access_token: string
-  }): Promise<{
+  topapiIndustryOrganizationGet(): Promise<{
     request_id: string
     success: boolean
     result: {

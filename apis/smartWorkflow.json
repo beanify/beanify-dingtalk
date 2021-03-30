@@ -1,0 +1,38 @@
+[
+  {
+    "url": "/topapi/processinstance/listids",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/processinstance/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/process/gettodonum",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/process/listbyuserid",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/processinstance/cspace/info",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/process/form/condition/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/process/template/manage/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/process/get_by_name",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/process/workrecord/task/query",
+    "method": "POST"
+  }
+]

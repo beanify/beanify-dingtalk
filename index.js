@@ -38,7 +38,7 @@ DingTalk.prototype.post = function (url, data) {
   return new Promise((resolve, reject) => {
     this.gettoken()
       .then(async token => {
-        const result = axios.post(url, data, {
+        const result = await axios.post(url, data, {
           baseURL,
           params: {
             access_token: token
