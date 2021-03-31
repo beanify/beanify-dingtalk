@@ -1,0 +1,38 @@
+[
+  {
+    "url": "/topapi/report/template/getbyname",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/simplelist",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/statistics",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/statistics/listbytype",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/receiver/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/comment/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/getunreadcount",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/report/template/listbyuserid",
+    "method": "POST"
+  }
+]

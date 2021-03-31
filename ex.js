@@ -37,6 +37,7 @@ beanify
 async function addressBook () {
   const dingTalk = beanify.$dingTalk
   const auth = await dingTalk.authScopes()
+  console.log(auth)
   // 获取部门用户userid列表
   const userIds = await dingTalk.topapiUserListid({
     dept_id: auth.auth_org_scopes.authed_dept[0]
@@ -175,7 +176,7 @@ async function addressBook () {
 
 beanify.ready(async e => {
   e && beanify.$log.error(e)
-  console.log(beanify.$dingTalk)
+  // console.log(beanify.$dingTalk)
   addressBook()
   beanify.print()
 })

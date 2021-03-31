@@ -1,0 +1,134 @@
+[
+  {
+    "url": "/topapi/attendance/getsimplegroups",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/getusergroup",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/member/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/memberusers/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/minimalism/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/query",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/search",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/wifis/query",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/positions/query",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/users/query",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/group/get",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/shift/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/shift/query",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/shift/search",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/shift/history/query",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/schedule/listbyday",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/schedule/listbyusers",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/schedule/result/listbyids",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/listschedule",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/schedule/shift/listbydays",
+    "method": "POST"
+  },
+  {
+    "url": "/attendance/list",
+    "method": "POST"
+  },
+  {
+    "url": "/attendance/listRecord",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/getattcolumns",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/getcolumnval",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/getleavetimebynames",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/isopensmartreport",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/getupdatedata",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/approve/duration/calculate",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/getleaveapproveduratio",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/getleavestatus",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/vacation/quota/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/vacation/record/list",
+    "method": "POST"
+  },
+  {
+    "url": "/topapi/attendance/vacation/type/list",
+    "method": "POST"
+  }
+]

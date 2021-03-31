@@ -6,6 +6,8 @@ import SmartWorkflow from './smartWorkflow'
 import SmartFormFilling from './smartFormFilling'
 import IntelligentPersonnel from './intelligentPersonnel'
 import UpcomingTasks from './upcomingTasks'
+import Attendance from './attendance'
+import Log from './log'
 
 export interface API {
   url: string
@@ -19,7 +21,7 @@ export class DingTalkOptions extends PluginOptions {
   importApis?: Array<API>
 }
 
-export interface DingTalk extends AddressBook, UpcomingTasks, IntelligentPersonnel, SmartFormFilling, SmartWorkflow, Notification, InterconnectionPatform {
+export interface DingTalk extends Log, AddressBook, Attendance, UpcomingTasks, IntelligentPersonnel, SmartFormFilling, SmartWorkflow, Notification, InterconnectionPatform {
   gettoken(): Promise<string>
 }
 
